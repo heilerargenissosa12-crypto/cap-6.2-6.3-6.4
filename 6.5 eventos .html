@@ -1,0 +1,30 @@
+<! DOCTYPE html>
+<HTML lang="es">
+<cabeza>
+  <Meta Charset="UTF-8">
+  <Meta Nombre="Ventana de observación" Contenido="ancho=ancho de dispositivo, escala inicial=1.0">
+  <Título>Listado 6-158: Usando objetos Event</Título>
+  <Guion>
+    Función agregareventos() {
+      var Lista = documento.consultaSelectorAll("Sección > P");
+      para (var f = 0; f < Lista.Longitud; f++) {
+        var Elemento = Lista[f];
+        Elemento.addEventListener("clic", cambiarcolor);
+      }
+    }
+    Función cambiarcolor(evento) {
+      var Elemento = evento.Objetivo;
+      Elemento.Estilo.Fondo Color = "#999999";
+    }
+    Ventana.addEventListener("cargar", agregareventos);
+  </Guion>
+</cabeza>
+<Cuerpo>
+  <Sección>
+    <h1>Sitio Web</h1>
+    <p>Mensaje número 1</p>
+    <p>Mensaje número 2</p>
+    <p>Mensaje número 3</p>
+  </Sección>
+</Cuerpo>
+</HTML>
