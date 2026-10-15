@@ -1,0 +1,33 @@
+<! DOCTYPE html>
+<HTML lang="es">
+<cabeza>
+  <Meta Charset="UTF-8">
+  <Meta Nombre="Ventana de observación" Contenido="ancho=ancho de dispositivo, escala inicial=1.0">
+  <Título>Listado 6-169: Arrojando excepciones</Título>
+  <Guion>
+    var Existencia = 5;
+
+    Función vendido(cantidad) {
+      si (cantidad > Existencia) {
+        var Error = {
+          Nombre: "ErrorExistencia",
+          Mensaje: "Sin Existencia"
+        };
+        lanzamiento Error;
+      } si no, {
+        Existencia = Existencia - cantidad;
+      }
+    }
+    Prueba {
+      vendido(8);
+    } Atrapa(Error) {
+      Consola.Log(Error.Mensaje);
+    }
+  </Guion>
+</cabeza>
+<Cuerpo>
+  <Sección>
+    <h1>Sitio Web</h1>
+  </Sección>
+</Cuerpo>
+</HTML>
